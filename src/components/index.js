@@ -1,0 +1,9 @@
+export { default as ProfileImages } from "./ProfileImages";
+export { default as IntroText } from "./IntroText";
+export { default as Splitter } from "./Splitter";
+export { default as NavigationTab } from "./NavigationTab";
+export { default as ResumeBox } from "./ResumeBox";
+export { default as HardSkills } from "./HardSkills";
+export { default as BackgroundExperience } from "./BackgroundExperience";
+export { default as FeaturedWork } from "./FeaturedWork";
+export { default as Portafolio } from "./Portafolio";
