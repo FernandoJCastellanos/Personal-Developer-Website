@@ -162,12 +162,12 @@ const GitHub8="https://github.com/FernandoJCastellanos/E-Commerce-Site---React"
 
   // Portafolio 7  // Portafolio 7  // Portafolio 27  // Portafolio 7  // Portafolio 7  // Portafolio 7  // Portafolio 7  // Portafolio 7
 
-const title7="Dog chill Dog world"
-const img7 = "https://firebasestorage.googleapis.com/v0/b/frontend-development-9534d.appspot.com/o/Tindog.png?alt=media&token=79260380-1974-4b81-ba7d-45e6563afa62"
-const video7 = "https://www.youtube.com/embed/xQx6QH6_z9M"
+const title7="Old Developer Site"
+const img7 = "https://firebasestorage.googleapis.com/v0/b/frontend-development-9534d.appspot.com/o/old-website-developer.png?alt=media&token=401eb0a3-8a4e-4ebd-9c06-a5061de846f9"
+const video7 = "https://www.youtube.com/embed/Ppm6D2ZvGcc"
 const techUsed7= "HTML, CSS, JavaScript"
-const accomplishements7="My first website built in Vanilla"
-const GitHub7="https://github.com/FernandoJCastellanos/Tindog"
+const accomplishements7="Website to show people how cool I am."
+const GitHub7="https://github.com/FernandoJCastellanos/Vanilla-Frontend-Development-Website"
 
 
 
@@ -516,7 +516,6 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
                   </div>
             </div>
           </div>
-
 
 
 
