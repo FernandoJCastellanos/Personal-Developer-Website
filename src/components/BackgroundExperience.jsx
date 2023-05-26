@@ -1,6 +1,8 @@
 
 // Environment
-
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 // Components
 
@@ -15,6 +17,65 @@
   
   
 const BackgroundExperience = () => {
+
+
+  // ANIMATION TO THE LEFT ONE
+  const elementsBackgroundLeftRef = useRef([]);
+
+    useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
+  
+      elementsBackgroundLeftRef.current.forEach((element) => {
+        gsap.fromTo(
+          element,
+          { opacity: 0,
+            x:-20
+           },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.5,
+            scrollTrigger: {
+              trigger: element,
+              start: 'center 85%',
+              end: 'center 15%',
+              toggleActions: 'play reverse play reverse',
+              markers: true
+            },
+          }
+        );
+      });
+    }, []);
+
+      // ANIMATION TO THE RIGHT ONE
+  const elementsBackgroundRightRef = useRef([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    elementsBackgroundRightRef.current.forEach((element) => {
+      gsap.fromTo(
+        element,
+        { opacity: 0,
+          x:20
+         },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: element,
+            start: 'center 85%',
+            end: 'center 15%',
+            toggleActions: 'play reverse play reverse',
+            markers: true
+          },
+        }
+      );
+    });
+  }, []);
+
+
     return (
       <div id="soft-skills">
 
@@ -32,7 +93,7 @@ const BackgroundExperience = () => {
           <div className="exp-row-container">
 
 
-            <div className="exp-container">
+            <div className="exp-container" ref={(el) => (elementsBackgroundLeftRef.current[0] = el)}>
                 <div className="exp-title">
                   <p>Programming World</p>
                 </div>
@@ -48,7 +109,7 @@ const BackgroundExperience = () => {
               </div>
 
 
-              <div className="exp-container">
+              <div className="exp-container" ref={(el) => (elementsBackgroundRightRef.current[0] = el)}>
                 <div className="exp-title">
                   <p>3D Artist</p>
                 </div>
@@ -75,7 +136,7 @@ const BackgroundExperience = () => {
           <div className="exp-row-container">
 
 
-            <div className="exp-container">
+            <div className="exp-container" ref={(el) => (elementsBackgroundLeftRef.current[1] = el)}>
                 <div className="exp-title">
                   <p>2D Motion Designer</p>
                 </div>
@@ -92,7 +153,7 @@ const BackgroundExperience = () => {
               </div>
         
 
-              <div className="exp-container">
+              <div className="exp-container" ref={(el) => (elementsBackgroundRightRef.current[1] = el)}>
                 <div className="exp-title">
                   <p>Film Production Background</p>
                 </div>
@@ -115,31 +176,34 @@ const BackgroundExperience = () => {
 
 
           <div className="exp-row-container">
-            <div className="exp-container">
+            <div className="exp-container" ref={(el) => (elementsBackgroundLeftRef.current[2] = el)}>
                 <div className="exp-title">
                   <p>Advertising Hell Hole</p>
                 </div>
                 <div className="exp-text">
                   <p>
                     A quote from a book I read back in college.
-                    <br/>
+                  </p>
+
+                  <p>
                       “The advertising world is where the Artist goes to die.”
-                    <br />
+                  </p>
+                  <p>
                     I never wanted to work in an Ad agency, but the Idea of being a Creative Director
                     really caught my attention. I didn't know that being a Creative was a job and a 
                     career. So I delved deep into it and wanted to find out everything I could about 
                     it. Interned in one of the top Ad agencies as a Creative Junior got to experience
                     the life cycle and the process of creativity and campaigns from the perspective
                     of the Creative Director and the whole crew. Art Director and Copywriter. 
-                    <br/>
+                    </p>
+                    <p>
                     It was fun.
+                    </p>
 
-
-                  </p>
                 </div>
               </div>
 
-              <div className="exp-container">
+              <div className="exp-container" ref={(el) => (elementsBackgroundRightRef.current[2] = el)}>
                 <div className="exp-title">
                   <p>Entrepreneurship, Business and Freelance.</p>
                 </div>

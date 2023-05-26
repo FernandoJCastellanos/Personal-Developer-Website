@@ -3,6 +3,11 @@
 import React, {useState} from "react";
 import LearnMore from "./LearnMore";
 
+
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 // Components
 
   
@@ -329,6 +334,31 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
 
 
+const elementsRef = useRef([]);
+
+useEffect(() => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  elementsRef.current.forEach((element) => {
+    gsap.fromTo(
+      element,
+      { opacity: 0,
+      y: -30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: element,
+          start: 'center 85%',
+          end: 'center 15%',
+          toggleActions: 'play reverse play reverse',
+          markers: true
+        },
+      }
+    );
+  });
+}, []);
 
 
 
@@ -351,7 +381,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 12 */}
           {/* 12 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[11] = el)}>
             <div className= "feature-box">
                   <div className="video-box" onClick={toggleVideo12}>
                     <img className="arrow" src={arrow} alt="arrow"/>
@@ -378,7 +408,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 11 */}
           {/* 11 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[10] = el)}>
             <div className= "feature-box">
                   <div className="video-box" onClick={toggleVideo11}>
                     <img className="arrow" src={arrow} alt="arrow"/>
@@ -408,7 +438,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 10 */}
           {/* 10 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[9] = el)}>
             <div className= "feature-box">
                   <div className="video-box" onClick={toggleVideo10}>
                     <img className="arrow" src={arrow} alt="arrow"/>
@@ -439,7 +469,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 9 */}
           {/* 9 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[8] = el)}>
             <div className= "feature-box">
                   <div className="video-box" onClick={toggleVideo9}>
                     <img className="arrow" src={arrow} alt="arrow"/>
@@ -470,7 +500,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 8 */}
           {/* 8 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[7] = el)}>
             <div className= "feature-box">
                   <div className="video-box" onClick={toggleVideo8}>
                     <img className="arrow" src={arrow} alt="arrow"/>
@@ -496,7 +526,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 7 */}
           {/* 7 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[6] = el)}>
             <div className= "feature-box">
                   <div className="video-box" onClick={toggleVideo7}>
                     <img className="arrow" src={arrow} alt="arrow"/>
@@ -524,7 +554,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 6 */}
           {/* 6 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[5] = el)}>
             <div className= "feature-box">
                   <div className="video-box" onClick={toggleVideo6}>
                     <img className="arrow" src={arrow} alt="arrow"/>
@@ -552,7 +582,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 5 */}
           {/* 5 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[4] = el)}>
             <div className= "feature-box">
                   <div className="video-box" onClick={toggleVideo5}>
                     <img className="arrow" src={arrow} alt="arrow"/>
@@ -586,7 +616,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 4 */}
           {/* 4 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[3] = el)}>
             <div className= "feature-box">
                 <div className="video-box" onClick={toggleVideo4}>
                   <img className="arrow" src={arrow} alt="arrow"/>
@@ -616,7 +646,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 3 */}
           {/* 3 */}
-          <div>
+          <div ref={(el) => (elementsRef.current[2] = el)}>
             <div className= "feature-box">
                   <div className="video-box" onClick={toggleVideo3}>
                     <img className="arrow" src={arrow} alt="arrow"/>
@@ -644,7 +674,7 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 2 */}
           {/* DrumKit */}
-          <div>
+          <div ref={(el) => (elementsRef.current[1] = el)}>
             <div className= "feature-box">
                 <div className="video-box" onClick={toggleVideo2}>
                   <img className="arrow" src={arrow} alt="arrow"/>
@@ -673,8 +703,8 @@ const GitHub1="https://github.com/FernandoJCastellanos/Tindog"
 
           {/* Portafolio 1 */}
           {/* TinDog */}
-          <div>
-            <div className= "feature-box">
+          <div ref={(el) => (elementsRef.current[0] = el)}>
+            <div className= "feature-box" >
               <div className="video-box" onClick={toggleVideo1}>
                 <img className="arrow" src={arrow} alt="arrow"/>
                 <img className={`thumbnail ${videoPlayer1 ? 'hidden' : 'visbile'}`} alt="VideoImage" src={img1} />

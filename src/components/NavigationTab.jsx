@@ -29,11 +29,11 @@ const NavigationTab = () => {
               Hard skills
             </a>           
           </li>
-          <li>
+          {/* <li>
             <a href="#soft-skills">
               Soft skills
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="#featured-work">
                 Featured work

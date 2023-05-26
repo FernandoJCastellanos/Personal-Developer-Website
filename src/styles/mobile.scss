@@ -7,6 +7,8 @@
 }
 
 
+
+
 /* foto */
 .foto-div {
     position: relative;
@@ -19,6 +21,25 @@
     display: flex;
     justify-content: center; 
     margin: auto;
+}
+
+
+// HEADER
+.visible-header{
+    position: fixed;
+    z-index: 0;
+}
+
+.not-visible-header{
+    visibility: hidden;
+    z-index: -5;
+
+}
+
+.overlap{
+    position: relative;
+    background-color: black;
+    z-index: 10;
 }
 
 
@@ -115,6 +136,7 @@
     align-items: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    // opacity: 0;
 }
 
 .resume-text {
@@ -127,6 +149,8 @@
     font-family: var(--font-main);
     font-size: var(--font-size-text);
 }
+
+
 
 a:link {
     text-decoration: none;
@@ -205,8 +229,8 @@ a:link {
     color: whitesmoke;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-family: var(--font-accent);
-    font-size: var(--font-size-main);
+    font-family: var(--font-main);
+    font-size: var(--font-size-text);
   }
 
 
@@ -252,6 +276,7 @@ a:link {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    will-change: transform;
   }
   
   .skills-list li {
@@ -261,7 +286,7 @@ a:link {
     border: 0.5px solid whitesmoke;
     color: whitesmoke;
     cursor: default;
-    transition: all 0.1s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
     font-family: var(--font-accent);
     font-size: var(--font-size-accent);
   }

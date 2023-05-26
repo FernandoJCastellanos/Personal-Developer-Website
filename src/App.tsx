@@ -1,40 +1,72 @@
 // Environment
-
-
+import React, { useEffect, useState } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // Components
 import { ProfileImages, IntroText, Splitter, NavigationTab, ResumeBox, HardSkills, BackgroundExperience, FeaturedWork, Portafolio } from './components';
 
+// CSS
+import "./index.scss"
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 
 function App() {
+
+
+// gsap.to(".background", {
+//   scrollTrigger:{
+//     trigger:".background",
+//     start:"top center",
+//     end:"top 100px",
+//     scrub: true,
+//     pin: true,
+//     markers: true
+//   },
+//   ease: "none",
+//   duration: 3
+// })
+
+
+
+
   return (
     <div>
 
-      <ProfileImages />
+        <div className='visible-header'>
+          <ProfileImages />
+        </div>
+        <div className='not-visible-header'>
+          <ProfileImages />
+        </div>
 
-      <IntroText />
-      <Splitter />
+        <div className='overlap'>
+          <IntroText />
+          <Splitter />
 
-      <NavigationTab />
-      <Splitter />
+          <NavigationTab />
+          <Splitter />
 
-      <ResumeBox />
-      <Splitter />
+          <ResumeBox />
+          <Splitter />
 
+          <HardSkills />
+          <Splitter />
 
-      <HardSkills />
-      <Splitter />
+          <BackgroundExperience />
+          <Splitter />
 
-      <BackgroundExperience />
-      <Splitter />
+          <FeaturedWork />
+          <Splitter />
 
-      <FeaturedWork />
-      <Splitter />
+          <Portafolio />
+          {/* <Splitter /> */}
 
-      <Portafolio />
-      <Splitter />
-
+      </div>
 
     </div>
   );

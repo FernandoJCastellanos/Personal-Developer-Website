@@ -3,6 +3,11 @@
 import React, {useState} from "react";
 import LearnMore from "./LearnMore";
 
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+// Components
+
 // Components
 
   
@@ -17,7 +22,31 @@ import LearnMore from "./LearnMore";
   
 const FeaturedWork = () => {
 
+  const elementsRef = useRef([]);
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    elementsRef.current.forEach((element) => {
+      gsap.fromTo(
+        element,
+        { opacity: 0,
+        y: -30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: element,
+            start: 'center 85%',
+            end: 'center 15%',
+            toggleActions: 'play reverse play reverse',
+            markers: true
+          },
+        }
+      );
+    });
+  }, []);
 
 
   // Feature Box 1  // Feature Box 1  // Feature Box 1  // Feature Box 1  // Feature Box 1
@@ -103,7 +132,7 @@ const GitHub3="https://github.com/FernandoJCastellanos/CryptoVerse"
 
             <div className="feature-row-insert">
 
-              <div className= "feature-box">
+              <div className= "feature-box" ref={(el) => (elementsRef.current[0] = el)}>
 
                 <p className="feature-name-featured">
                   {title1}
@@ -129,7 +158,7 @@ const GitHub3="https://github.com/FernandoJCastellanos/CryptoVerse"
 
 
             <div className="feature-row-insert">
-              <div className= "feature-box">
+              <div className= "feature-box" ref={(el) => (elementsRef.current[1] = el)}>
 
                 <p className="feature-name-featured">
                   {title2}
@@ -155,7 +184,7 @@ const GitHub3="https://github.com/FernandoJCastellanos/CryptoVerse"
 
 
             <div className="feature-row-insert">
-              <div className= "feature-box">
+              <div className= "feature-box" ref={(el) => (elementsRef.current[3] = el)}>
 
                 <p className="feature-name-featured">
                   {title3}
