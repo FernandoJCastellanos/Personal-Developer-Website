@@ -18,18 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
 
 
-// gsap.to(".background", {
-//   scrollTrigger:{
-//     trigger:".background",
-//     start:"top center",
-//     end:"top 100px",
-//     scrub: true,
-//     pin: true,
-//     markers: true
-//   },
-//   ease: "none",
-//   duration: 3
-// })
+
 
 
 
