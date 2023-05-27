@@ -38,10 +38,10 @@ const FeaturedWork = () => {
           duration: 0.5,
           scrollTrigger: {
             trigger: element,
-            start: 'center 85%',
-            end: 'center 15%',
+            start: 'center 95%',
+            end: 'center 5%',
             toggleActions: 'play reverse play reverse',
-            markers: true
+            // markers: true
           },
         }
       );
