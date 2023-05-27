@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Personal-Developer-Website/static/css/main.0d010f60.css",
+    "main.js": "/Personal-Developer-Website/static/js/main.96e12ce7.js",
+    "static/js/27.07ddfad5.chunk.js": "/Personal-Developer-Website/static/js/27.07ddfad5.chunk.js",
+    "static/media/foto.png": "/Personal-Developer-Website/static/media/foto.37ce76e6d138ec003496.png",
+    "static/media/website-icon.svg": "/Personal-Developer-Website/static/media/website-icon.1095d9f810ff90c423cb0e4793b72318.svg",
+    "static/media/linkedin-icon.svg": "/Personal-Developer-Website/static/media/linkedin-icon.7beef312bae960c6ff0ed7f624ad7aa5.svg",
+    "static/media/email-icon.svg": "/Personal-Developer-Website/static/media/email-icon.b701b91cf547627d91ddb03a97224077.svg",
+    "static/media/location-icon.svg": "/Personal-Developer-Website/static/media/location-icon.78a22b3a50eda6c99e09e4c8b3e74421.svg",
+    "static/media/cv-icon.svg": "/Personal-Developer-Website/static/media/cv-icon.ef6ad7de3f260181fc441a86faa6733f.svg",
+    "index.html": "/Personal-Developer-Website/index.html",
+    "static/media/play-solid.svg": "/Personal-Developer-Website/static/media/play-solid.73bafcf7fe60bf6d5ecb91588326435f.svg"
+  },
+  "entrypoints": [
+    "static/css/main.0d010f60.css",
+    "static/js/main.96e12ce7.js"
+  ]
+}
